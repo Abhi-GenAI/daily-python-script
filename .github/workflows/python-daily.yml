@@ -37,5 +37,8 @@
               chmod +x chromedriver
               sudo mv chromedriver /usr/local/bin/  
           - name: Run the Script
+            env:
+              MY_EMAIL: ${{ secrets.MY_EMAIL }}
+              MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
             run: python main.py
     
