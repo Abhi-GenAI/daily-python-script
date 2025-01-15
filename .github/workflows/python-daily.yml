@@ -19,5 +19,5 @@
               python -m pip install --upgrade pip
               pip install -r requirements.txt
           - name: Run the Script
-            run: python app.py
+            run: python main.py
     
