@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import smtplib
 import time
@@ -8,9 +9,13 @@ import os
 from dotenv import load_dotenv
 import pandas as pd
 
+chrome_options = Options()
+chrome_options.add_argument("--headless")  # Run in headless mode
+chrome_options.add_argument("--no-sandbox")  # Disable sandboxing for security
+chrome_options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage
 
 service=Service(executable_path="/usr/local/bin/chromedriver")
-driver=webdriver.Chrome(service=service)
+driver=webdriver.Chrome(service=service,options=chrome_options)
 
 url="https://www.chittorgarh.com/report/ipo-subscription-status-live-bidding-data-bse-nse/21/"
 
