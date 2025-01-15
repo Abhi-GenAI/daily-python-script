@@ -71,8 +71,9 @@ if my_email is None or my_password is None:
     print("Error: Email or Password is not set.")
     exit(1)
 
-# Ensure password is in string format
-my_password = str(my_password)    
+# Ensure the password is in string format
+if isinstance(my_password, bytes):
+    my_password = my_password.decode("utf-8") 
 
 connection=smtplib.SMTP("smtp.gmail.com", 587)
 connection.starttls()
