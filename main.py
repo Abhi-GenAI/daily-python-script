@@ -62,7 +62,6 @@ file_ipo="ipo_data.csv"
 df=pd.read_csv(file_ipo)
 html_table=df.to_html(index=False)
 
-
 load_dotenv()
 my_email=os.getenv("MY_EMAIL")
 my_password=os.getenv("MY_PASSWORD")
