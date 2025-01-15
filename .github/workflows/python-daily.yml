@@ -36,6 +36,10 @@
               unzip chromedriver_linux64.zip
               chmod +x chromedriver
               sudo mv chromedriver /usr/local/bin/  
+          - name: Check if secrets are available
+            run: |
+              echo "MY_EMAIL is set"
+              echo "MY_PASSWORD is set"    
           - name: Run the Script
             env:
               MY_EMAIL: ${{ secrets.MY_EMAIL }}
