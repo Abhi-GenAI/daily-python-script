@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import pandas as pd
 
 
-service=Service(executable_path="chromedriver.exe")
+service=Service(executable_path="./drivers/chromedriver.exe")
 driver=webdriver.Chrome(service=service)
 
 url="https://www.chittorgarh.com/report/ipo-subscription-status-live-bidding-data-bse-nse/21/"
