@@ -64,8 +64,8 @@ html_table=df.to_html(index=False)
 
 
 load_dotenv()
-my_email=os.getenv("myemail")
-my_password=os.getenv("mypassword")
+my_email=os.getenv("MY_EMAIL")
+my_password=os.getenv("MY_PASSWORD")
 
 if my_email is None or my_password is None:
     print("Error: Email or Password is not set.")
