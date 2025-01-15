@@ -65,11 +65,11 @@ html_table=df.to_html(index=False)
 
 load_dotenv()
 my_email=os.getenv("myemail")
-password=os.getenv("mypassword")
+my_password=os.getenv("mypassword")
 
-connection=smtplib.SMTP("smtp.gmail.com")
+connection=smtplib.SMTP("smtp.gmail.com", 587)
 connection.starttls()
-connection.login(user=my_email, password=password)
+connection.login(user=my_email, password=my_password)
 subject = "IPO Data"
 body = f"""
 <html>
