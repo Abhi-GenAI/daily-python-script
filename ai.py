@@ -28,6 +28,8 @@ html_content=str(soup)
 
 load_dotenv()
 
+#demo
+
 API_key=os.getenv("GEMINI_API_KEY")
 if not API_key:
     print("API Key not found. Check your .env file or environment variables.")
